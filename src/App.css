@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
