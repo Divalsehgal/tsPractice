@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CustomButton from '../html/Button';
 
 type AuthUserProps={
     name:string,
@@ -19,8 +20,8 @@ function User() {
     };
     return (
       <div>
-        <button onClick={handleLogin}>Login</button>
-        <button onClick={handleLogout}>Logout</button>
+        <CustomButton onClick={handleLogin}>Login</CustomButton>
+        <CustomButton onClick={handleLogout}>Logout</CustomButton>
         <div>user name is{user?.name} </div>
         <div>user email is{user?.email} </div>
       </div>)

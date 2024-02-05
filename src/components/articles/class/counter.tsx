@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import { Component } from "react";
+import CustomButton from "../html/Button";
 type CounterProps={
     message: string
 } 
@@ -17,7 +18,7 @@ type CounterState={
   render() {
     return <div>count :{this.state.count}
     {this.props.message}
-    <button onClick={this.handleClick}>increment</button>
+    <CustomButton onClick={this.handleClick}>increment</CustomButton>
     </div>;
   }
 }

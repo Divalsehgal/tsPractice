@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import  { useReducer } from "react";
+import CustomButton from "../html/Button";
 const initialState: initialStateProps = {
   count: 0,
 };
@@ -47,13 +48,13 @@ export function Counter() {
   return (
     <div>
       <h1>{state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment", payload: 1 })}>
+      <CustomButton onClick={() => dispatch({ type: "increment", payload: 1 })}>
         +
-      </button>
-      <button onClick={() => dispatch({ type: "decrement", payload: 1 })}>
+      </CustomButton>
+      <CustomButton onClick={() => dispatch({ type: "decrement", payload: 1 })}>
         -
-      </button>
-      <button onClick={() => dispatch({ type: "reset" })}>reset</button>
+      </CustomButton>
+      <CustomButton onClick={() => dispatch({ type: "reset" })}>reset</CustomButton>
     </div>
   );
 }

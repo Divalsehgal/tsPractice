@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import CustomInput from '../html/Input';
 
 function Domref() {
     const ref=useRef<HTMLInputElement>(null);
@@ -7,9 +8,9 @@ function Domref() {
     },[])
   return (
     <div>
-      <input type="text" ref={ref}/>
+      <CustomInput type="text" ref={ref} />
     </div>
-  )
+  );
 }
 
 export default Domref

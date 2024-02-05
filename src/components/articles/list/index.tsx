@@ -1,4 +1,3 @@
-import React from "react";
 import {PersonList} from "./personList"
 function index() {
   const nameList = [

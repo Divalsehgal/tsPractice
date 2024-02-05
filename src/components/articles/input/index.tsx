@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import {Input} from "./input"; 
+import CustomInput from "../html/Input";
 
 function index() {
   const handleChange = (event: ChangeEvent) => {
@@ -7,7 +7,7 @@ function index() {
   };
   return (
     <div>
-      <Input value={"dival"} handleChange={handleChange} />
+      <CustomInput value={"dival"} onChange={handleChange} />
     </div>
   );
 }

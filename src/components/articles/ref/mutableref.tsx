@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import CustomButton from '../html/Button';
 
 function Mutableref() {
     const [timer,setTimer]=useState(0)
@@ -19,11 +20,12 @@ function Mutableref() {
       }
     },[])
   return (
-    <div>timer:
+    <div>
+      timer:
       {timer}
-      <button onClick={stopTimerHandler}>Stop timer</button>
+      <CustomButton onClick={stopTimerHandler}>Stop timer</CustomButton>
     </div>
-  ) 
+  ); 
 }
  
 export default Mutableref

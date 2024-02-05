@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import CustomButton from "../html/Button";
 
 export function LoggedIn() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogin = () => {
-    setLoggedIn(true);
+    setIsLoggedIn(true);
   };
   const handleLogout = () => {
-    setLoggedIn(false);
+    setIsLoggedIn(false);
   };
   return (
     <div>
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
+      <CustomButton onClick={handleLogin}>Login</CustomButton>
+      <CustomButton onClick={handleLogout}>Logout</CustomButton>
       <div>user is {isLoggedIn ? "logged in" : "log out"}</div>
     </div>
   );

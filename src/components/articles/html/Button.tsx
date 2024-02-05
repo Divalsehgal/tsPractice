@@ -1,25 +1,31 @@
-import React from 'react'
-// this props for normal one 
-// type buttonProps={
-//     variant:'primary'|'secondary'|'outlined'
-// } & React.ComponentProps<"button">
+import React from "react";
 
-
-// this props for if want to restrict chidlren from only to type op string
-
-type buttonProps = {
-  variant: 'primary' | 'secondary' | 'outlined',
-  children: string
-} & Omit<React.ComponentProps<"button">, 'children'>
-
-function CustomButton(props: buttonProps) {
-  const { variant, children, ...rest } = props;
-  return (
-    <button className={`class-with-${variant}`} {...rest}>
-      {children}
-    </button>
-  )
+interface ButtonProps<T> extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "tertiary";
+  classNames?: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>, data?: T) => void;
+  children?: React.ReactNode;
 }
 
-export default CustomButton
+//Reusable CustomButton component with generic type T
 
+function CustomButton<T>({
+  onClick,
+  children,
+  ...rest
+}: Readonly<ButtonProps<T>>) {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // You can access standard event properties here
+    // For example, event.currentTarget.value
+
+    onClick(event);
+  };
+
+  return (
+    <button onClick={handleClick} {...rest}>
+      {children}
+    </button>
+  );
+}
+
+export default CustomButton;
