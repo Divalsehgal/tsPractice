@@ -1,15 +1,24 @@
 
 import { profileProps } from './profile'
 import {Login} from './login'
-type privateProps={
-    isLoggedIn: boolean,
-    component:React.ComponentType<profileProps>
+
+export enum AuthStatus {
+  LoggedIn = "LoggedIn",
+  LoggedOut = "LoggedOut",
 }
-export const Private=({isLoggedIn,component:Component}:privateProps)=> {
-    if(isLoggedIn){
-        return <Component name="settingsPage"/>
-    }else{
-        return <Login/>
-    }
+
+type privateProps = {
+  authStatus: AuthStatus;
+  component: React.ComponentType<profileProps>;
+};
+export const Private = ({ authStatus, component: Component }: privateProps) => {
+  switch (authStatus) {
+    case AuthStatus.LoggedIn:
+      return <Component name="settingsPage" />;
+    case AuthStatus.LoggedOut:
+      return <Login />;
+    default:
+      return <div>Loading...</div>;
+  }
 
 }

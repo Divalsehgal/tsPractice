@@ -1,6 +1,6 @@
-type toastProps={
+type toastProps=Readonly<{
     position:Exclude <`${horizontalPosition}-${verticalPosition}`,'center-center'>|'center'
-}
+}>
 
 type horizontalPosition='left'|'right'|'center'
 

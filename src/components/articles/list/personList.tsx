@@ -1,8 +1,8 @@
 import { Name } from "../../Person.types";
-type PersonListProps = {
+type PersonListProps = Readonly<{
   nameList: Name[];
   styles: React.CSSProperties;
-};
+}>;
 export function PersonList(props: PersonListProps) {
   return (
     <div style={props?.styles}>

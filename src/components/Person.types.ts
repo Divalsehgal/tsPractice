@@ -3,6 +3,6 @@ export type personProps = {
 };
 
 export type Name = {
-  firstName: String;
-  lastName: String;
+  firstName: string;
+  lastName: string;
 }

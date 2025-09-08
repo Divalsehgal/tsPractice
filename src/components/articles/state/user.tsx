@@ -7,7 +7,6 @@ type AuthUserProps={
 }
 function User() {
     const [user, setUser] = useState<null|AuthUserProps>(null);
-    // const [user, setUser] = useState<AuthUserProps>({} as AuthUserProps);  // type assertion : 
                                                                               //means user wont be null will be always of type AuthUserProps
     const handleLogin = () => {
       setUser({

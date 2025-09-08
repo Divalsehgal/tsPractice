@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm start`
 
+
 1.Interfaces 2. Type aliases 3. Unions .
 
 Interfaces are used to define the structure of an object.

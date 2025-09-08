@@ -1,7 +1,4 @@
 import GridBox from "./gridBox";
-import Greet from "../articles/greet/index";
-import Person from "../articles/person/index";
-import Heading from "../articles/heading/index";
 import Input from "../articles/input/index";
 import List from "../articles/list/index";
 import State from "../articles/state/index";
@@ -10,29 +7,10 @@ import Context from "../articles/context/index";
 
 import Text from "../articles/polyphormic/index";
 import RandomNumber from "../articles/restriction/index";
-import Status from "../articles/status/index";
 import Generics from "../articles/generics/index";
 
 const MainContent = () => {
   const data = [
-    {
-      id: 1,
-      title: "1",
-      component: <Greet />,
-      description: "Basic string, number, boolean props",
-    },
-    {
-      id: 2,
-      title: "2",
-      component: <Person />,
-      description: "Basic Object containing string props",
-    },
-    {
-      id: 3,
-      title: "3",
-      description: "Union of string",
-      component: <Status />,
-    },
     {
       id: 4,
       title: "4",
@@ -44,12 +22,6 @@ const MainContent = () => {
       title: "5",
       description: "Basic input props",
       component: <Input />,
-    },
-    {
-      id: 6,
-      title: "6",
-      description: "how to take in children type as string and component",
-      component: <Heading />,
     },
     {
       id: 7,
