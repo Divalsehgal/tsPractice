@@ -13,19 +13,13 @@ const Docs: React.FC = () => {
 
   return (
     <div>
-      <h1>TypeScript - React Documentation</h1>
       <div>
-        <button onClick={() => handleTabChange("interface")}>Interface</button>
-        <button onClick={() => handleTabChange("type")}>Type</button>
         <button onClick={() => handleTabChange("union")}>Union</button>
         <button onClick={() => handleTabChange("intersection")}>
           Intersection
         </button>
         <button onClick={() => handleTabChange("mapped")}>Mapped Types</button>
         <button onClick={() => handleTabChange("generics")}>Generics</button>
-        <button onClick={() => handleTabChange("function")}>
-          Function Types
-        </button>
       </div>
 
       <div>
